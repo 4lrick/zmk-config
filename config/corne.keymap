@@ -12,8 +12,8 @@
 #define U_MOUSE_MOVE_MAX 4800
 #define U_MOUSE_SCROLL_MAX 500
 
-&mmv {    time-to-max-speed-ms = <9000>;};
-&msc {    time-to-max-speed-ms = <9000>;};
+&mmv {    time-to-max-speed-ms = <50>;};
+&msc {    time-to-max-speed-ms = <50>;};
 
 / {
     keymap {
