@@ -36,9 +36,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6          &kp N7          &kp N8        &kp N9           &kp N0     &kp BSPC
-&kp LCTRL  &trans  &trans  &trans    &trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans     &trans
-&kp LSHFT  &trans  &trans  &trans    &trans  &trans       &trans          &trans          &trans        &trans           &mkp LCLK  &mkp RCLK
+&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6          &kp N7          &kp N8        &kp N9           &kp N0          &kp BSPC
+&kp LCTRL  &trans  &trans  &trans    &trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mwh SCROLL_UP  &mwh SCROLL_DOWN
+&kp LSHFT  &trans  &trans  &trans    &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK       &mkp RCLK
                            &kp LGUI  &trans  &kp SPACE    &kp RET         &trans          &kp LEFT_ALT
             >;
         };
@@ -65,6 +65,15 @@
 &kp C_PLAY         &kp C_PAUSE      &kp C_PREVIOUS  &kp C_NEXT  &trans  &trans       &kp HOME  &kp END  &kp PAGE_UP   &kp PAGE_DOWN  &trans   &kp RIGHT_SHIFT
                                                     &kp LGUI    &trans  &kp SPACE    &kp RET   &trans   &kp LEFT_ALT
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        layer_3 {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
